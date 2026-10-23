@@ -132,7 +132,7 @@
       letter-spacing: -0.5px;
     }
 
-    /* ==================== 1. 锁屏界面 (密码 0000) ==================== */
+    /* ==================== 1. 锁屏界面  ==================== */
     .lock-screen {
       position: absolute;
       inset: 0;
@@ -363,7 +363,7 @@
       cursor: pointer;
       position: relative;
     }
-    .app-icon {
+        .app-icon {
       width: 62px;
       height: 62px;
       border-radius: 15px;
@@ -375,9 +375,10 @@
       position: relative;
       transition: transform 0.15s;
       overflow: hidden;
-      background-size: cover;
+      background-size: 118%; 
       background-position: center;
     }
+
     .app-item:active .app-icon {
       transform: scale(0.9);
     }
@@ -463,7 +464,7 @@
       background: rgba(255, 255, 255, 0.45);
     }
     .dock-trimmed-icon {
-      background-size: 135% !important;
+      background-size: 140% !important
       background-position: center !important;
     }
 
@@ -892,7 +893,7 @@
 </div>
 
 <script>
-  const PASSCODE = "0000";
+  const PASSCODE = "0406";
   let currentInput = "";
 
   function pressDigit(num) {
