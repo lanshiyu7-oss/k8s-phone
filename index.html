@@ -132,7 +132,7 @@
       letter-spacing: -0.5px;
     }
 
-    /* ==================== 1. 锁屏界面 ==================== */
+    /* ==================== 1. 锁屏界面 (密码 0000) ==================== */
     .lock-screen {
       position: absolute;
       inset: 0;
@@ -348,7 +348,7 @@
       opacity: 0.95;
     }
 
-    /* 图标网格通用属性与真图渲染 */
+    /* 图标通用 */
     .app-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -436,7 +436,7 @@
       width: 100%;
     }
 
-    /* 底部 Dock 栏 */
+    /* 底部 Dock 栏（裁切白边专用类名） */
     .home-bottom {
       display: flex;
       flex-direction: column;
@@ -457,6 +457,10 @@
     }
     .phone-frame.theme-light .dock {
       background: rgba(255, 255, 255, 0.45);
+    }
+    .dock-trimmed-icon {
+      background-size: 118% !important;
+      background-position: center !important;
     }
 
     /* ==================== 3. App 内部通用结构 ==================== */
@@ -612,7 +616,7 @@
   <!-- ==================== 2. 主屏幕桌面 ==================== -->
   <div class="home-screen">
     <div class="desktop-content">
-      <!-- 顶部小组件 -->
+      <!-- 顶部小组件（已替换为“喝茶”与“直播”） -->
       <div class="widget-row">
         <div class="widget-box widget-cal" onclick="openApp('notes')">
           <div>
@@ -620,8 +624,8 @@
             <div class="cal-daynum">17</div>
           </div>
           <div class="cal-events">
-            <div class="cal-event-item">购物<div class="cal-event-sub">全天</div></div>
-            <div class="cal-event-item">洗衣服</div>
+            <div class="cal-event-item">喝茶<div class="cal-event-sub">全天</div></div>
+            <div class="cal-event-item">直播</div>
           </div>
         </div>
 
@@ -638,21 +642,21 @@
         </div>
       </div>
 
-      <!-- 应用网格（使用你的图床图标） -->
+      <!-- 应用网格 -->
       <div class="app-grid">
-        <!-- Instagram 图标 -->
+        <!-- Instagram -->
         <div class="app-item" onclick="openApp('ins')">
           <div class="app-icon" style="background-image: url('https://i.postimg.cc/tR8LgpBg/IMG-5612.jpg');"></div>
           <span class="app-name">Instagram</span>
         </div>
 
-        <!-- 照片/相册 图标 -->
+        <!-- 照片/相册 -->
         <div class="app-item" onclick="openApp('photos')">
           <div class="app-icon" style="background-image: url('https://i.postimg.cc/wTJnyZrd/IMG-5608.jpg');"></div>
           <span class="app-name">照片</span>
         </div>
 
-        <!-- 备忘录 图标 -->
+        <!-- 备忘录 -->
         <div class="app-item" onclick="openApp('notes')">
           <div class="app-icon icon-notes">
             <div class="icon-notes-top"></div>
@@ -661,7 +665,7 @@
           <span class="app-name">备忘录</span>
         </div>
 
-        <!-- 设置 图标 -->
+        <!-- 设置 -->
         <div class="app-item" onclick="openApp('settings')">
           <div class="app-icon" style="background-image: url('https://i.postimg.cc/BQDRLkz6/IMG-5613.jpg');"></div>
           <span class="app-name">设置</span>
@@ -669,33 +673,33 @@
       </div>
     </div>
 
-    <!-- 底部 Dock 栏（使用你的图床图标） -->
+    <!-- 底部 Dock 栏（裁切白边优化版） -->
     <div class="home-bottom">
       <div class="dock">
-        <!-- 拨号/通话 -->
+        <!-- 拨号 -->
         <div class="app-item" onclick="openApp('phone')">
-          <div class="app-icon" style="background-image: url('https://i.postimg.cc/PrZ0p97n/IMG-5609.jpg');">
+          <div class="app-icon dock-trimmed-icon" style="background-image: url('https://i.postimg.cc/PrZ0p97n/IMG-5609.jpg');">
             <div class="badge">3</div>
           </div>
         </div>
 
         <!-- 短信 -->
         <div class="app-item" onclick="openApp('messages')">
-          <div class="app-icon" style="background-image: url('https://i.postimg.cc/sDSbQqLD/IMG-5610.jpg');">
+          <div class="app-icon dock-trimmed-icon" style="background-image: url('https://i.postimg.cc/sDSbQqLD/IMG-5610.jpg');">
             <div class="badge">2</div>
           </div>
         </div>
 
-        <!-- kkt 聊天软件 -->
+        <!-- kkt -->
         <div class="app-item" onclick="openApp('kkt')">
-          <div class="app-icon" style="background-image: url('https://i.postimg.cc/zD49f8xz/IMG-5615.jpg');">
+          <div class="app-icon dock-trimmed-icon" style="background-image: url('https://i.postimg.cc/zD49f8xz/IMG-5615.jpg');">
             <div class="badge">5</div>
           </div>
         </div>
 
         <!-- 音乐 -->
         <div class="app-item" onclick="openApp('music')">
-          <div class="app-icon" style="background-image: url('https://i.postimg.cc/5NvDYTrJ/IMG-5611.jpg');"></div>
+          <div class="app-icon dock-trimmed-icon" style="background-image: url('https://i.postimg.cc/5NvDYTrJ/IMG-5611.jpg');"></div>
         </div>
       </div>
     </div>
@@ -810,7 +814,7 @@
     </div>
   </div>
 
-  <!-- 相册/照片 -->
+  <!-- 照片/相册 -->
   <div class="app-window" id="app-photos">
     <div class="app-navbar">
       <div class="back-home-btn" onclick="closeAllApps()">‹ 主屏幕</div>
